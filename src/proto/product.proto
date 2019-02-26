@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "ProductProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message  Product{
+	//产品ID
+    string pdId = 1;
+	//产品所属主体
+    string pdBlngSbj = 2;
+	//产品类型
+    string pdTp = 3;
+	//产品名称
+    string pdNm = 4;
+	//产品简介
+    string pdBrf = 5;
+	//产品LOGO路径
+    string pdLogoSrc = 6;
+	//产品URL
+    string pdUrl = 7;
+	//产品序号
+    int32 pdDispNo = 8;
+	//可用状态
+    string avlSt = 9;
+    //起始页
+    int32 pageIndex = 10;
+    //分页大小
+    int32 pageSize = 11;
+}

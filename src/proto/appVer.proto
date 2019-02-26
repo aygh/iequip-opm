@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "AppVerProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+//版本
+message AppVer {
+    //项目版本ID
+    string verId = 1;
+    //项目ID
+    string appId = 2;
+    //版本号
+    string version = 3;
+    //版本描述
+    string verDesc = 4;
+    //代码包路径
+    string codeSrc = 5;
+    //发布时间
+    int64 pubTms = 6;
+    //发布方式
+    string pubTp = 7;
+    //版本部署的包路径
+    string verCodeSrc = 8;
+    //版本状态
+    string verSt = 9;
+    //版本状态描述
+    string verStDesc = 10;
+    //机构编号
+    string insId = 11;
+    //机构名称
+    string insNm = 12;
+    //企业名称
+    string entNm = 13;
+    //认证主体名称
+    string sbjNm = 14;
+    //项目名称
+    string appNm = 15;
+    //项目类型
+    string appTp = 16;
+    //项目logo地址
+    string appLogoSrc = 17;
+    //项目简介
+    string appBrf = 18;
+    //项目版本提交时间
+    int64 lclCrtTms = 19;
+    //审核人
+    string adtPsnNm = 20;
+    //审核时间
+    int64 adtTms = 21;
+
+}
+// 查询版本分页参数
+message SelectParam{
+ //账号名称
+ string insNm = 1;
+ //姓名名称
+ string appNm = 2;
+ //版本审核状态
+ string verAuthenSt = 3;
+ //版本提交时间查询开始日期
+ int64 beginTms = 4;
+ //版本提交时间查询结束日期
+ int64 endTms = 5;
+ //起始条数
+ int32 start = 6;
+ //当页条数
+ int32 maxRows = 7;
+}
+//设置版本状态请求参数
+message VerStParam{
+    //操作类型
+    string oprTp = 1;
+    //操作人ID
+    string oprPsnId = 2;
+    //操作人名称
+    string oprPsnNm = 3;
+    //操作描述
+    string oprDesc = 4;
+    //发布时间
+    int64 pubTms = 5;
+    //发布方式
+    string pubTp = 6;
+    //发布设备列表
+    string pubEquips = 7;
+}
+
+message VerAction{
+    //生命周期编号
+    string actionId = 1;
+    //版本ID
+    string verId  = 2;
+    //操作类型
+    string oprTp = 3;
+    //操作人员ID
+    string oprPsnId = 4;
+    //操作人员姓名
+    string oprPsnNm = 5;
+    //操作描述
+    string oprDesc = 6;
+    //操作时间
+    int64 oprTms = 7;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "PageProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto;
+import "google/protobuf/any.proto";
+
+message Page {
+    /*当前页*/
+    int32 pageNum = 1;
+    /*每页的数量*/
+    int32 pageSize = 2;
+    /*当前页的实际数量*/
+    int32 currPageSize = 3;
+    /*总记录数*/
+    int64 total = 4;
+    /*总页数*/
+    int32 pages = 5;
+    /*数据列表*/
+    repeated google.protobuf.Any data = 6;
+}

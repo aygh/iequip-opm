@@ -1,0 +1,62 @@
+syntax = "proto3";
+/*暂未使用*/
+ 
+option java_multiple_files = false;
+option java_outer_classname = "CommProto";
+option optimize_for = SPEED;
+ 
+package com.ccb.cloud.protobuf.proto;
+import "google/protobuf/any.proto";
+ 
+message ProtoRequest {
+    RequestSession requestSession = 1;
+    RequestBody requestBody = 2;
+}
+ 
+message RequestSession {
+    /*用户编号*/
+    string acctId = 1;
+    /*用户名称*/
+    string acctNm = 2;
+    /*用户性别*/
+    string usrGnd = 3;
+    /*所属机构编号*/
+    string insId = 4;
+    /*法人编号*/
+    string lglpsnId = 5;
+    /*电话号码*/
+    string acctPhone = 6;
+    /*邮箱*/
+    string emailAdr = 7;
+    /*登录次数*/
+    string Land_Cnt = 8;
+    /*上次登录时间*/
+    string Mnplt_Dt_Tm = 9;
+    /*调用方WEB来源*/
+    string reqWeb = 10;
+}
+ 
+message RequestBody {
+    /*数据*/
+    google.protobuf.Any ENTITY = 1;
+}
+ 
+ 
+message ProtoResponse {
+    ResponseHeader responseHeader = 1;
+    ResponseBody responseBody = 2;
+}
+ 
+message ResponseHeader {
+    /*全局跟踪号*/
+    string SYS_TRACE_ID = 1;
+    /*返回的结果码*/
+    string SYS_TX_STATUS = 2;
+    /*返回的结果描述*/
+    string SYS_RESP_DESC = 3;
+}
+ 
+message ResponseBody {
+    /*数据*/
+    google.protobuf.Any ENTITY = 1;
+}

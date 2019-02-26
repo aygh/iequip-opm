@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+html, body, ul, li, table, td, tr, th, a, div, img, button, h3, section, article, aside, footer, main {
+    margin: 0;
+    padding: 0;
+}
+
+section, article, aside, footer, main {
+    display: block;
+}
+
+html, body, #app {
+    font-size: 16px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.clearfix {
+    zoom: 1;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+

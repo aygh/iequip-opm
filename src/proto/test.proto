@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "TestProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message Test {
+    string uid = 1;
+}
+
+
+
+

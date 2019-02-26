@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "RetRsltProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message RetRslt {
+    /*创建状态*/
+    string retRsltCd = 1;
+    /*创建结果描述*/
+    string retRsltDsc = 2;
+}
+
+
+
+

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "OrgInfoProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message  OrgInfo{
+	//机构编号
+    string insId = 1;
+	//机构全称
+    string insChnFullnm = 2;
+	//机构简称
+    string insChnShrtnm = 3;
+}

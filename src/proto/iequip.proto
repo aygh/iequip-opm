@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "IequipProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+import "iequip/app.proto";
+message IequipAppList {
+	repeated com.ccb.cloud.protobuf.proto.iequip.App appList = 1;
+}
+
+message  Iequip{
+	//终端编号
+    string devId = 1;
+	//终端名称
+    string devName = 2;
+	//型号ID
+    string modelId = 3;
+	//IP地址
+    string ipAddr = 4;
+	//Mac地址
+    string devMac = 5;
+	//备注
+    string remark = 6;
+	//终端状态
+    string devStatus = 7;
+	//绑定机构ID
+    string insId = 8;
+	//逻辑删除标志
+    string isDel = 9;
+	//注册时间
+    string lclCrtTms = 10;
+	//最近修改时间
+    string lclUdtTms = 11;
+    
+    int32 pageIndex = 12;
+    
+    int32 pageSize = 13;
+    
+    string beginTms = 14;
+    
+    string endTms = 15;
+    
+    string entNm = 16;
+    
+    Model model = 17;
+}
+
+message IequipList{
+	repeated Iequip iequipList = 1;
+}
+
+message  Model{
+	//设备型号主键
+    string modelId = 1;
+	//设备类型
+    string devType = 2;
+	//厂商编号
+    string vendorCode = 3;
+	//厂商名称
+    string vendorNm = 4;
+	//设备型号
+    string modelCode = 5;
+	//设备型号名称
+    string modelNm = 6;
+    
+    repeated ModelCode modelCodeLists = 7;
+}
+message ModelList{
+	repeated Model modelList = 1;
+}
+message ModelCode{
+	//设备型号主键
+    string modelId = 1;
+    //设备型号
+    string modelCode = 2;
+}

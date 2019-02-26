@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "AppProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message App {
+    //项目ID
+    string appId = 1;
+    //机构ID
+    string insId = 2;
+    //项目密钥
+    string appSecret = 3;
+    //项目名称
+    string appNm = 4;
+    //项目类型
+    string appTp = 5;
+    //项目LOGO图片路径
+    string appLogoSrc = 6;
+    //项目简介
+    string appBrf = 7;
+    //项目状态
+    string appSt = 8;
+    //项目状态描述
+    string appStDesc = 9;
+    //可修改次数
+    int32 reviTims = 10;
+    //逻辑删除标志
+    string isDel = 11;
+    //项目创建时间
+    int64 lclCrtTms = 12;
+    //机构名称
+    string insNm = 13;
+    //机构ID列表
+    string insIdList = 14;
+    //开始时间
+    int64 beginTms = 15;
+    //结束时间
+    int64 endTms = 16;
+    //起始页
+    int32 start = 17;
+    //数量
+    int32 maxRows = 18;
+    int32 daDispNo = 19;
+ 	AppVersion appVersion = 20;
+ 	//角色ID
+    string rlId = 21;
+}
+
+message AppVersion {
+    string verId = 1;
+    string appId = 2;
+    string verCodeSrc = 3;
+}

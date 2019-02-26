@@ -1,0 +1,96 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "AcctProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message AcctRegister {
+    //短信验证码
+    string veriCode = 1;
+    //验证码序号
+    string codeSN = 2;
+    //注册账号信息
+    Acct acct = 3;
+}
+
+message AcctUpdCredential {
+    //更新方式
+    string updTp = 1;
+    //账号ID
+    string acctId = 2;
+    //旧密码
+    string oldCredential = 3;
+    //新密码
+    string newCredential = 4;
+    //注册手机号
+    string acctPhone = 5;
+    //短信验证码
+    string veriCode = 6;
+    //验证码序号
+    string codeSN = 7;
+}
+
+message AcctUpdPhone {
+    /*原注册手机号*/
+    string oldAcctPhone = 1;
+    /*原手机短信验证码*/
+    string oldVeriCode = 2;
+    /*验证码序号*/
+    string oldCodeSN = 3;
+    /*新手机号*/
+    string newAcctPhone = 4;
+    /*新手机短信验证码*/
+    string newVeriCode = 5;
+    /*验证码序号*/
+    string newCodeSN = 6;
+    /*账号ID*/
+    string acctId = 7;
+	//更新方式
+    string updTp = 8;
+}
+
+message Acct {
+    /*账号ID*/
+    string acctId = 1;
+    /*账号用户名*/
+    string acctNm = 2;
+    /*注册用手机号*/
+    string acctPhone = 3;
+    /*账户类型*/
+    string acctTp = 4;
+    /*实名认证状态*/
+    string rlnmAuthenSt = 5;
+    /*实名认证信息*/
+    string rlnmAuthenMsg = 6;
+    /*认证人手机号*/
+    string authenPhone = 7;
+    /*用户邮箱*/
+    string emailAdr = 8;
+    /*认证主体名称*/
+    string sbjNm = 9;
+    /*认证主体证件类型*/
+    string sbjCrdtTp = 10;
+    /*认证主体证件号*/
+    string sbjCrdtNo = 11;
+    /*统一社会信用代码*/
+    string unnSocCrCd = 12;
+    /*账号名称*/
+    string entNm = 13;
+    /*企业证件类型*/
+    string entCrdtTp = 14;
+    /*企业证件号*/
+    string entCrdtNo = 15;
+    /*经办人姓名*/
+    string rspbpsnNm = 16;
+    /*经办人证件类型*/
+    string rspbpsnCrdtTp = 17;
+    /*经办人证件号*/
+    string rspbpsnCrdtNo = 18;
+    /*实名认证审核提起时间*/
+    int64 lclCrtTms = 19;
+    /*凭证*/
+    string credential = 20;
+
+}

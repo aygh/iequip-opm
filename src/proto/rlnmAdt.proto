@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "RlnmAdtProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message RlnmAdt {
+    string rlnmAdtId = 1;
+    string acctId = 2;
+    string rlnmInfId = 3;
+    string adtPsnNm = 4;
+    string adtTms = 5;
+}

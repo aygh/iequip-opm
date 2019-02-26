@@ -1,0 +1,36 @@
+{
+  "name": "iequip-opm-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service serve --open --port 3000",
+    "prod": "vue-cli-service build --mode=production",
+    "uat": "vue-cli-service build --mode=test",
+    "proto": "npx pbjs -t json-module -w commonjs -o src/proto/proto.js src/proto/*.proto"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.9",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/cli-shared-utils": "^3.1.0",
+    "@vue/eslint-config-prettier": "^3.0.5",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^7.1.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "node-sass": "^4.9.4",
+    "protobufjs": "^6.8.8",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.3.0"
+  }
+}

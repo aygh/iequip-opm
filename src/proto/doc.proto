@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "DocProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message Doc {
+	/*版本发布ID*/
+    string docId = 1;
+	/*文档所属平台*/
+    string docBlngSbj = 2;
+	/*文档类型*/
+    string docTp = 3;
+	/*文档名称*/
+    string docNm = 4;
+	/*文档简介*/
+    string docBrf = 5;
+	/*文档存储路径*/
+    string docSrc = 6;
+	/*逻辑删除标志*/
+    string idDel = 7;
+	/*文档维护ID*/
+    string docLogId = 8;
+	/*维护类型*/
+    string oprTp = 9;
+	/*维护人员*/
+    string mntPsnNm = 10;
+	/*维护时间*/
+    string mntTms = 11;
+	//起始页
+    string pageNum = 12;
+    //数量
+    string pageSize = 13;
+}

@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_outer_classname = "AcctRlnmProto";
+option optimize_for = SPEED;
+
+package com.ccb.cloud.protobuf.proto.iequip;
+
+message ConditionQuery{
+    /*实名认证状态*/
+    string rlnmAuthenSt = 1;
+    /*认证主体名称*/
+    string sbjNm = 2;
+    /*申请时间*/
+    string lclCrdTms = 3;
+    /*处理时间*/
+    string adtTms = 4;
+    /*起始条数*/
+    string start = 5;
+    /*当页条数*/
+    string maxRows = 6;
+}
+
+message AcctRlnm {
+    /*实名认证信息ID*/
+    string rlnmInfId = 1;
+    /*账户类型*/
+    string acctTp = 2;
+    /*实名认证状态*/
+    string rlnmAuthenSt = 3;
+    /*实名认证信息*/
+    string rlnmAuthenMsg = 4;
+    /*认证人身份证正面图片路径*/
+    string authenFrontSrc = 5;
+    /*认证人身份证背面图片路径*/
+    string authenBackSrc = 6;
+    /*认证人手持身份证图片路径*/
+    string authenHandSrc = 7;
+    /*认证人手机号*/
+    string authenPhone = 8;
+    /*认证主体名称*/
+    string sbjNm = 9;
+    /*认证主体证件类型*/
+    string sbjCrdtTp = 10;
+    /*认证主体证件号*/
+    string sbjCrdtNo = 11;
+    /*统一社会信用代码*/
+    string unnSocCrCd = 12;
+    /*账号名称（个人或企业名称）*/
+    string entNm = 13;
+    /*企业证件类型*/
+    string entCrdtTp = 14;
+    /*企业证件号*/
+    string entCrdtNo = 15;
+    /*企业证件图片路径*/
+    string entCrdtSrc = 16;
+    /*经办人姓名*/
+    string rspbpsnNm = 17;
+    /*经办人证件类型*/
+    string rspbpsnCrdtTp = 18;
+    /*经办人证件号*/
+    string rspbpsnCrdtNo = 19;
+    /*实名认证审核提起时间*/
+    string lclCrtTms = 20;
+    /*实名认证审核ID*/
+    string rlnmAdtId = 21;
+    /*账号ID*/
+    string acctId = 22;
+    /*审核人姓名*/
+    string adtPsnNm = 23;
+    /*审核时间*/
+    string adtTms = 24;
+}
